@@ -31,3 +31,49 @@
     height: 350px;
     border-radius: 20px;
 }
+
+.recommend-dish h3 {
+    margin-top: 80px;
+    text-align: center;
+    font-family: 'Italiana', serif;
+    font-size: 30pt;
+}
+
+.recommend-dish h3:hover {
+    color: rgba(0, 0, 0, 0.395);
+    text-decoration: underline;
+}
+
+.recommend-dish div {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.describe-dish {
+    border: #3f373a9c 2px dotted;
+    height: 30rem;
+    width: 25%;
+    padding: 15px;
+}
+
+.describe-dish:hover {
+    transform: scale(1.1);
+}
+
+.describe-dish p {
+    font-family: 'Italiana', serif;
+    font-size: 25pt;
+    height: 0px;
+    margin-bottom: 70px;
+}
+
+.describe-dish small {
+    font-family: 'Roboto', sans-serif;
+}
+
+.describe-dish img {
+    width: 190px;
+    height: 130px;
+}
