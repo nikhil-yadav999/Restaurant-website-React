@@ -1,7 +1,8 @@
-import MainFooter from "./components/layouts/MainFooter";
-import MainNavigation from "./components/layouts/MainNavigation";
+import MainFooter from "./components/Layouts/MainFooter";
+import MainNavigation from "./components/Layouts/MainNavigation";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Main from "./components/Main/Main";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Main />
         </Route>
         <Route path="/menu">
-          <h1>Menu page</h1>
+          <Menu />
         </Route>
         <Route path="/takeout-order">
           <h1>Online order page</h1>

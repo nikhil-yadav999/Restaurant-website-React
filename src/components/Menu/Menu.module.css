@@ -1,0 +1,25 @@
+.menu-container {
+    position: relative;
+    padding-bottom: 20px;
+    /* height:80vh; */
+    padding-top: 10vh;
+    padding-left: 15vw;
+}
+
+.menu-container::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background: url(./background//menu-background.jpg);
+    background-size: contain;
+}
+
+.menu-container .header {
+    position: relative;
+    margin-top: 0;
+    
+}

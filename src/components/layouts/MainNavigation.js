@@ -9,11 +9,6 @@ const MainNavigation = () => {
         <nav className={classes.nav}>
           <ul>
             <li>
-              <NavLink to="/about" activeClassName={classes.active}>
-                About
-              </NavLink>
-            </li>
-            <li>
               <NavLink to="/menu" activeClassName={classes.active}>
                 Menu
               </NavLink>
