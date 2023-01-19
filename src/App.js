@@ -1,5 +1,5 @@
-import MainFooter from "./layouts/MainFooter";
-import MainNavigation from "./layouts/MainNavigation";
+import MainFooter from "./components/layouts/MainFooter";
+import MainNavigation from "./components/layouts/MainNavigation";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Main from "./components/Main/Main";
 
@@ -10,9 +10,6 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <Main />
-        </Route>
-        <Route path="/about">
-          <h1>About page</h1>
         </Route>
         <Route path="/menu">
           <h1>Menu page</h1>

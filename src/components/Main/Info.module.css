@@ -1,0 +1,33 @@
+.chef {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-top: 100px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.chef-describe {
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    height: 25rem;
+    background-color: #ebe8e568;
+}
+
+.chef-title {
+    color: rgb(169, 159, 159);
+    ;
+}
+
+.chef-name {
+    font-family: 'Italiana', serif;
+    font-size: 25pt;
+    margin-bottom: 15px;
+}
+
+.chef-pic img {
+    margin-right: 150px;
+    width: 220px; 
+    height: 350px;
+    border-radius: 20px;
+}
