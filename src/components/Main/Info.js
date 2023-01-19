@@ -10,7 +10,7 @@ const dummy_chef_info = {
   intro:
     "Jiahao Ye would describe himself as a passionate, confident, and creative chef who can skilfully plan menus, prepare outstanding food, manage budgets, and lead a team of people to deliver quality of service to customers ",
   summary:
-    "Besides operating a restaurant, Jiahao Ye also has a mixed education background in computer science, mathematics and economics. He has a passion for full-stack web development and loves to develop quantitative trading strategies using Python and C# proramming during his free time.",
+    "Besides operating a restaurant, Jiahao Ye also has a mixed education background in computer science, mathematics and economics. He has a passion for full-stack web development and he loves to create beautiful modern and beautiful website. Additionally, Jiahao is also a money enthusiast and he loves to develop quantitative trading strategies using Python and C# proramming during his free time.",
 };
 
 const dummy_dishes_info = [
@@ -49,6 +49,8 @@ const Info = () => {
           <img src={headchef} alt="head-chef Jiahao Ye" />
         </div>
       </section>
+
+      <hr />
 
       <section className={classes["recommend-dish"]}>
         <h3>A BRILLIANT MENU</h3>

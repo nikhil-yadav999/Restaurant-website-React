@@ -1,6 +1,6 @@
 .landing {
     width: 100%;
-    height: 600px;
+    height: 80vh;
     margin: 0px;
     padding: 0px;
     font-family: 'Italiana', serif;
@@ -12,9 +12,9 @@
 
 .landing div {
     color: #fffffffa;
-    font-size: 32pt;
+    font-size: 2.5vw;
     padding-top: 120px;
-    padding-left: 30px;
+    padding-left: 10vw;
 }
 .view-menu {
     font-size: 12pt;

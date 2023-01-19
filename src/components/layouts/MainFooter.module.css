@@ -1,5 +1,6 @@
 footer {
     padding-top: 20px;
+    margin-top: 5rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
