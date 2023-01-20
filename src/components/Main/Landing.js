@@ -11,7 +11,7 @@ const Landing = () => {
         <i>
           <h1>Enjoy the Beauty of Food</h1>
         </i>
-        <p>Welcome to the Emperors Dish</p>
+        <p>Welcome to the Ye's Cuisine</p>
         <Link to="/takeout-order">
           <Button>Order Online</Button>
         </Link>

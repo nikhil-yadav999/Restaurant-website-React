@@ -3,11 +3,19 @@ import MainNavigation from "./components/Layouts/MainNavigation";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Main from "./components/Main/Main";
 import Menu from "./components/Menu/Menu";
+import TakeOut from "./components/TakeOut/TakeOut";
+import { useState } from "react";
 
 function App() {
+  const [isOnTakeout, setIsOnTakeout] = useState(false);
+
+  const setNavBarHandler = () => {
+    setIsOnTakeout(true);
+  };
+
   return (
     <>
-      <MainNavigation />
+      {!isOnTakeout && <MainNavigation />}
       <Switch>
         <Route path="/" exact>
           <Main />
@@ -16,10 +24,10 @@ function App() {
           <Menu />
         </Route>
         <Route path="/takeout-order">
-          <h1>Online order page</h1>
+          <TakeOut onTakeOut={setNavBarHandler} />
         </Route>
         <Route path="/login">
-          <h1>Member login</h1>
+          <h1>Member login feature - work in progress</h1>
         </Route>
       </Switch>
       <MainFooter />

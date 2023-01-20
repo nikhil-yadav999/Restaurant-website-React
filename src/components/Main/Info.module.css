@@ -32,6 +32,10 @@
     border-radius: 20px;
 }
 
+.recommend-dish {
+    margin-bottom: 5rem;
+}
+
 .recommend-dish h3 {
     margin-top: 80px;
     text-align: center;

@@ -65,7 +65,6 @@ const dummy_memu_list = [
 
 // define a sorting helper function:
 const sortMenuItems = (items, sortby) => {
-  console.log(sortby);
   return items.sort((itemA, itemB) => {
     if (sortby === "ascprice") {
       return parseInt(itemA.price) > parseInt(itemB.price) ? 1 : -1;
