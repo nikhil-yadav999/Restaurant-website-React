@@ -72,7 +72,9 @@ const sortMenuItems = (items, sortby) => {
     } else if (sortby === "descprice") {
       return parseInt(itemA.price) < parseInt(itemB.price) ? 1 : -1;
     } else if (sortby === "ascalphabet") {
+      return itemA.title.localeCompare(itemB.title);
     } else if (sortby === "descalphabet") {
+      return itemB.title.localeCompare(itemA.title);
     }
   });
 };
@@ -130,7 +132,7 @@ const Menu = () => {
         </div>
         <div>
           <ul>
-            {dummy_memu_list.map((item) => {
+            {sortedQuotes.map((item) => {
               return (
                 <MenuItem
                   key={item.id}
