@@ -20,6 +20,18 @@
 
 .menu-container .header {
     position: relative;
-    margin-top: 0;
-    
+    margin-top: 0;   
 }
+
+.btn {
+    text-decoration: none;
+    background-color: rgba(24, 27, 27, 0.336);
+    color: white;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid rgb(52, 56, 56);
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+  }
+  

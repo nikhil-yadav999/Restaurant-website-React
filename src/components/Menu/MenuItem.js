@@ -5,21 +5,27 @@ const MenuItem = (props) => {
   const [isDetailShow, setIsDetailShow] = useState(false);
 
   const detailShowHandler = () => {
-    console.log("click");
+    setIsDetailShow((prevState) => {
+      return !prevState;
+    });
   };
 
   return (
-    <li className={classes.item}>
-      <figure>
-        <blockquote>
-          <p>{props.title}</p>
-        </blockquote>
-        <figcaption>$ {props.price}</figcaption>
-      </figure>
-      <button className={classes.btn} onClick={detailShowHandler}>
-        See Details
-      </button>
-    </li>
+    <>
+      <li className={classes.item}>
+        <figure>
+          <blockquote>
+            <p>{props.title}</p>
+          </blockquote>
+          <figcaption>$ {props.price}</figcaption>
+        </figure>
+        <button className={classes.btn} onClick={detailShowHandler}>
+          See Details
+        </button>
+        <br />
+      </li>
+      {isDetailShow && <p className={classes.item}>{props.description}</p>}
+    </>
   );
 };
 

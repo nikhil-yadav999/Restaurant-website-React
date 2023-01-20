@@ -1,6 +1,7 @@
 import classes from "./Menu.module.css";
 import { NavLink } from "react-router-dom";
 import MenuItem from "./MenuItem";
+import { useHistory, useLocation } from "react-router-dom";
 
 // create a dummy list of menu for now: there are 7 items for now
 const dummy_memu_list = [
@@ -62,7 +63,53 @@ const dummy_memu_list = [
   },
 ];
 
+// define a sorting helper function:
+const sortMenuItems = (items, sortby) => {
+  console.log(sortby);
+  return items.sort((itemA, itemB) => {
+    if (sortby === "ascprice") {
+      return parseInt(itemA.price) > parseInt(itemB.price) ? 1 : -1;
+    } else if (sortby === "descprice") {
+      return parseInt(itemA.price) < parseInt(itemB.price) ? 1 : -1;
+    } else if (sortby === "ascalphabet") {
+    } else if (sortby === "descalphabet") {
+    }
+  });
+};
+
 const Menu = () => {
+  // useHistory() hook to push to new URL
+  const history = useHistory();
+
+  // to extract the query param:
+  const location = useLocation();
+
+  // this will return an object with key-value pairs derived from the query params
+  const queryParams = new URLSearchParams(location.search);
+
+  const isSortingAscendingPrice =
+    queryParams.get("sort") === "ascprice" ? true : false;
+  const isSortingAscendingAlphabet =
+    queryParams.get("sort") === "ascalphabet" ? true : false;
+
+  const sortingMenuHandlerPrice = () => {
+    history.push({
+      pathname: location.pathname,
+      search: "?sort=" + (isSortingAscendingPrice ? "descprice" : "ascprice"),
+    });
+  };
+
+  const sortingMenuHandlerAlphabet = () => {
+    history.push({
+      pathname: location.pathname,
+      search:
+        "?sort=" +
+        (isSortingAscendingAlphabet ? "descalphabet" : "ascalphabet"),
+    });
+  };
+
+  const sortedQuotes = sortMenuItems(dummy_memu_list, queryParams.get("sort"));
+
   return (
     <>
       <div className={classes["menu-container"]}>
@@ -74,13 +121,26 @@ const Menu = () => {
           </p>
         </div>
         <div>
-          <button>Sort by price</button>
-          <button>Sort by alphabet</button>
+          <button className={classes.btn} onClick={sortingMenuHandlerPrice}>
+            Sort by price
+          </button>
+          <button className={classes.btn} onClick={sortingMenuHandlerAlphabet}>
+            Sort by alphabet
+          </button>
         </div>
         <div>
-            <ul>
-                {dummy_memu_list.map((item) => {return <MenuItem key={item.id} title={item.title} price={item.price} description={item.description}></MenuItem>})}
-            </ul>
+          <ul>
+            {dummy_memu_list.map((item) => {
+              return (
+                <MenuItem
+                  key={item.id}
+                  title={item.title}
+                  price={item.price}
+                  description={item.description}
+                ></MenuItem>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </>
