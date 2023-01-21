@@ -9,8 +9,9 @@ import { useState } from "react";
 function App() {
   const [isOnTakeout, setIsOnTakeout] = useState(false);
 
-  const setNavBarHandler = () => {
-    setIsOnTakeout(true);
+  const setNavBarHandler = (input) => {
+    if (input === "onPage") {setIsOnTakeout(true);}
+    else {setIsOnTakeout(false);}
   };
 
   return (

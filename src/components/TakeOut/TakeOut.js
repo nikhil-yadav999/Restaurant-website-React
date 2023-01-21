@@ -5,10 +5,14 @@ import Header from "./Components/Layout/Header";
 import Meals from "./Components/Meals/Meals";
 import { CartProvider } from "./Components/store/CartProvider";
 
+import { useHistory } from "react-router-dom";
+
 const TakeOut = (props) => {
+  const history = useHistory();
+
   const [isCartShown, setIsCartShown] = useState(false);
 
-  props.onTakeOut();
+  props.onTakeOut("onPage");
 
   const showCart = () => {
     setIsCartShown(true);
@@ -18,6 +22,11 @@ const TakeOut = (props) => {
     setIsCartShown(false);
   };
 
+  const btnClickHandler = () => {
+    props.onTakeOut("offPage");
+    history.push("/");
+  };
+
   return (
     <>
       <CartProvider>
@@ -25,6 +34,7 @@ const TakeOut = (props) => {
         <Header onShowCart={showCart} />
         <main>
           <Meals />
+          <button onClick={btnClickHandler}>To main page</button>
         </main>
       </CartProvider>
     </>
