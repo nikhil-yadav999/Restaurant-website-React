@@ -4,7 +4,6 @@ import Cart from "./Components/Cart/Cart";
 import Header from "./Components/Layout/Header";
 import Meals from "./Components/Meals/Meals";
 import { CartProvider } from "./Components/store/CartProvider";
-import Button from "../UI/Button";
 
 import { useHistory } from "react-router-dom";
 
@@ -35,7 +34,7 @@ const TakeOut = (props) => {
         <Header onShowCart={showCart} />
         <main>
           <Meals />
-          <Button onClick={btnClickHandler}>To main page</Button>
+          <button onClick={btnClickHandler}>To main page</button>
         </main>
       </CartProvider>
     </>
