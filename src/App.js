@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Main from "./components/Main/Main";
 import Menu from "./components/Menu/Menu";
 import TakeOut from "./components/TakeOut/TakeOut";
+import Login from "./components/TakeOut/Components/Login/Login";
 import { useState } from "react";
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
           <TakeOut onTakeOut={setNavBarHandler} />
         </Route>
         <Route path="/login">
-          <h1>Member login feature - work in progress</h1>
+          <Login />
         </Route>
       </Switch>
       <MainFooter />

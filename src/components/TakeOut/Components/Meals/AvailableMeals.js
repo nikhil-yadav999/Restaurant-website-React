@@ -30,7 +30,7 @@ const AvailableMeals = () => {
             id: key,
             name: data[key].name,
             price: data[key].price,
-            description: data[key].description
+            description: data[key].description,
           });
         }
 

@@ -118,7 +118,7 @@ const Menu = () => {
           <h1>Our Menu</h1>
           <p>
             Bring you the most authentic Asian style.{" "}
-            <NavLink to="/take-out">Order a take-out</NavLink>
+            <NavLink to="/takeout-order">Order a take-out</NavLink>
           </p>
         </div>
         <div>
