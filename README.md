@@ -28,7 +28,7 @@ This is fully functional restaurant website created with React Router.
 - Main landing page
 - Menu page
 - Online takeout order system
-- Member page (work in progress)
+- Reservation system (work in progress)
 
 ## Features:
 
@@ -36,7 +36,7 @@ Here's a list of features included in this project
 
 - Fully interactive using HTML, CSS, JavaScript
 - Dynamically render CSS classes with useEffect hook
-- Add to cart & manage cart functionality
+- Add to shopping cart & manage shopping cart functionality
 - Awesome modern minimalist UI
 - UseReducer and useContext hooks for complex state management
 - User input validation for text input
@@ -45,7 +45,7 @@ Here's a list of features included in this project
 
 ## Deploy to Netlify
 
-link: [https://csb-j3errn.netlify.app/](https://csb-j3errn.netlify.app/)
+link: [https://yescuisine.netlify.app/](https://yescuisine.netlify.app/)
 
 ## Screenshots
 
