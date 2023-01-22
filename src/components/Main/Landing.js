@@ -15,8 +15,8 @@ const Landing = () => {
         <Link to="/takeout-order">
           <Button>Order Online</Button>
         </Link>
-        <Link to="/menu">
-          <a className={classes["view-menu"]}>View Menu</a>
+        <Link to="/menu" className={classes["view-menu"]}>
+          View Menu
         </Link>
       </div>
     </section>

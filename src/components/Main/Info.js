@@ -57,7 +57,7 @@ const Info = () => {
         <div>
           {dummy_dishes_info.map((dish) => {
             return (
-              <div className={classes["describe-dish"]}>
+              <div className={classes["describe-dish"]} key={dish.title}>
                 <p>{dish.title}</p>
                 <small>{dish.description}</small>
                 <img src={dish.source} alt="dish pic" />
