@@ -1,0 +1,30 @@
+footer {
+    padding-top: 20px;
+    margin-top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10.5pt;
+    color: #fff;
+    background-color: #3f373a9c;
+}
+
+footer .address, .hours {
+    flex: 40%;
+    text-align: center;
+    margin: 20px 10px 20px 10px;
+}
+
+footer .soc-media {
+    flex: 100%;
+    text-align: center;
+    margin: 20px 10px 5px 10px;
+}
+
+footer .fa {
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+}

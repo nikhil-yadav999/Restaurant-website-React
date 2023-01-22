@@ -1,6 +1,6 @@
 import MainFooter from "./components/Layouts/MainFooter";
 import MainNavigation from "./components/Layouts/MainNavigation";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Main from "./components/Main/Main";
 import Menu from "./components/Menu/Menu";
 import TakeOut from "./components/TakeOut/TakeOut";
@@ -11,8 +11,11 @@ function App() {
   const [isOnTakeout, setIsOnTakeout] = useState(false);
 
   const setNavBarHandler = (input) => {
-    if (input === "onPage") {setIsOnTakeout(true);}
-    else {setIsOnTakeout(false);}
+    if (input === "onPage") {
+      setIsOnTakeout(true);
+    } else {
+      setIsOnTakeout(false);
+    }
   };
 
   return (
