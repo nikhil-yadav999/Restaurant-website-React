@@ -6,7 +6,7 @@ const MainNavigation = () => {
     <>
       <header className={classes.header}>
         <div className={classes.logo}>
-          <Link to="/" style={{ textDecoration: 'none', color:'white' }}>Ye's Cuisine</Link>
+          <Link to="/" style={{ textDecoration: 'none', color:'white' }}>Ye's Cuisines</Link>
         </div>
         <nav className={classes.nav}>
           <ul>
