@@ -27,8 +27,6 @@
 }
 
 .nav a {
-  /* text-decoration: none;
-    color: #88dfdf; */
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
@@ -57,7 +55,8 @@
 }
 
 .nav a:hover,
-.nav a:active,
-.nav a.active {
+.nav a.active::after {
   color: #e6fcfc;
+  width: 100%;
+  left:0
 }
