@@ -1,9 +1,16 @@
 import classes from "./Info.module.css";
 import headchef from "./headchef.png";
 
-import sukiyaki from "./dishes-img/Sukiyaki.jpg";
-import pekingDuck from "./dishes-img/PekingDuck.jpg";
-import ikan from "./dishes-img/Ikan.jpg";
+import sukiyaki from "./images/Sukiyaki.jpg";
+import pekingDuck from "./images/PekingDuck.jpg";
+import ikan from "./images/Ikan.jpg";
+
+import sashimi from "./images/Sashimi.png";
+import panda from "./images/panda.png";
+import manager from "./images/manager.png";
+import Button from "../UI/Button";
+
+import { Link } from "react-router-dom";
 
 const dummy_chef_info = {
   name: "Jiahao Ye",
@@ -35,6 +42,30 @@ const dummy_dishes_info = [
   },
 ];
 
+const dummy_staff_info = [
+  {
+    name: "Sashimi Wasabi",
+    title: "Vice chef",
+    description:
+      "Miss Sashimi would describe herself as a skillful and experienced cook with 10 years of experience. She specializes in Japanese cuisine and likes eating fish with Wasabi.",
+    source: sashimi,
+  },
+  {
+    name: "KungFu Panda",
+    title: "Customer service",
+    description:
+      "Mr KungFu has more than 10 years of experience and he is the best customer service representative in our restaurant and he loves to play KungFu in front of our customer.",
+    source: panda,
+  },
+  {
+    name: "Precious Salami",
+    title: "Chief Manager",
+    description:
+      "Miss Salami is the chief manager in our restaurant and she works hard to ensure the operating effiency in our restaruant and make our restaurant a much better place.",
+    source: manager,
+  },
+];
+
 const Info = () => {
   return (
     <>
@@ -50,7 +81,7 @@ const Info = () => {
         </div>
       </section>
 
-      <hr />
+      <hr className={classes["hr-style"]} />
 
       <section className={classes["recommend-dish"]}>
         <h3>A BRILLIANT MENU</h3>
@@ -65,6 +96,44 @@ const Info = () => {
             );
           })}
         </div>
+        <br />
+        <br />
+        <br />
+        <Link to="/menu">
+          <Button>View Menu</Button>
+        </Link>
+      </section>
+
+      <hr className={classes["hr-style"]} />
+
+      <section className={classes.staffs}>
+        <h3>Our Team</h3>
+        <div className={classes["staffs-info"]}>
+          {dummy_staff_info.map((staff) => {
+            return (
+              <div className={classes["flip-card"]} key={staff.name}>
+                <div className={classes["flip-card-inner"]}>
+                  <div className={classes["flip-card-front"]}>
+                    <p>{staff.title}</p>
+                    <img
+                      src={staff.source}
+                      alt={staff.name}
+                      style={{ width: "300px", height: "300px" }}
+                    />
+                  </div>
+                  <div className={classes["flip-card-back"]}>
+                    <h1>{staff.name}</h1>
+                    <p>{staff.title}</p>
+                    <p>{staff.description}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <Link to="/takeout-order">
+          <Button>Make an order</Button>
+        </Link>
       </section>
     </>
   );
