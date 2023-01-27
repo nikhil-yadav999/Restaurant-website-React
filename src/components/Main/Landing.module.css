@@ -31,6 +31,14 @@
     animation: text-fly-in 5s ease-out
 }
 
+.landing h1:hover{
+    cursor:default
+}
+
+.landing p:hover{
+    cursor:default
+}
+
 /* Landing page div flyt-in effect: enter from the left and change opacity */
 @keyframes text-fly-in {
     0% {
@@ -38,7 +46,7 @@
         opacity: 0;
     }
     80% {
-        transform: translateX(5%);
+        transform: translateX(2.5%);
         opacity: 0.8;
     }
     95% {
@@ -55,6 +63,7 @@
     font-size: 12pt;
     color: rgba(255, 255, 255, 0.701);
     margin-left: 30px;
+    transition: all 0.5s;
 }
 
 .view-menu:hover {

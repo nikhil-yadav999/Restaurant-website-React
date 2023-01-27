@@ -14,6 +14,10 @@
     background-color: #ebe8e568;
 }
 
+.chef-describe:hover {
+    cursor: default;
+}
+
 .chef-describe p {
     font-size: 1.05rem;
 }
@@ -43,18 +47,42 @@
 
 .recommend-dish {
     margin-bottom: 5rem;
+    text-align: center;
 }
 
 .recommend-dish h3 {
     margin-top: 80px;
+    margin-bottom: 0;
     text-align: center;
     font-family: 'Italiana', serif;
     font-size: 35pt;
+    position: relative;
+    display: inline-block;
 }
+
+.recommend-dish h3::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.395);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
 
 .recommend-dish h3:hover {
     color: rgba(0, 0, 0, 0.395);
-    text-decoration: underline;
+    cursor: default;
+}
+
+.recommend-dish h3:hover::after {
+    color: rgba(0, 0, 0, 0.395);
+    cursor: default;
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .recommend-dish div {
