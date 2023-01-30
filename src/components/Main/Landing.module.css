@@ -32,11 +32,17 @@
 }
 
 .landing h1:hover{
-    cursor:default
+    cursor:default;
+    transform: scale(1.05);
+}
+
+.landing h1,p {
+    transition: all 0.5s;
 }
 
 .landing p:hover{
-    cursor:default
+    cursor:default;
+    transform: scale(1.05);
 }
 
 /* Landing page div flyt-in effect: enter from the left and change opacity */
