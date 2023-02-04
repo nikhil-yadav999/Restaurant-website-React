@@ -1,5 +1,5 @@
-import Landing from "./Landing";
-import Info from "./Info";
+import Landing from "../components/Main/Landing";
+import Info from "../components/Main/Info";
 
 const Main = () => {
   return (

@@ -1,10 +1,10 @@
 import MainFooter from "./components/Layouts/MainFooter";
 import MainNavigation from "./components/Layouts/MainNavigation";
 import { Route, Switch } from "react-router-dom";
-import Main from "./components/Main/Main";
-import Menu from "./components/Menu/Menu";
-import TakeOut from "./components/TakeOut/TakeOut";
-import Login from "./components/TakeOut/Components/Login/Login";
+import Main from "./pages/Main";
+import Menu from "./pages/Menu";
+import TakeOut from "./pages/TakeOut";
+import Login from "./pages/Login";
 import { useState } from "react";
 
 function App() {

@@ -1,6 +1,6 @@
 import classes from "./Menu.module.css";
 import { NavLink } from "react-router-dom";
-import MenuItem from "./MenuItem";
+import MenuItem from "../components/Menu/MenuItem";
 import { useHistory, useLocation } from "react-router-dom";
 
 // create a dummy list of menu for now: there are 7 items for now
