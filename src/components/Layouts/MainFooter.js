@@ -5,9 +5,9 @@ const MainFooter = () => {
     <>
       <footer>
         <div className={classes.address}>
-          123 Justin Treaudeu St, Ottawa <br />
-          123 456 8888 <br />
-          <a href="mailto:emperorsdish@ni-hao.ca">emperorsdish@ni-hao.ca</a>
+          123 Pallet city, Japan <br />
+          123 456 7890 <br />
+          <a href="mailto:dummyemailaddress">dummyemailaddress</a>
           <br />
         </div>
         <div className={classes.hours}>

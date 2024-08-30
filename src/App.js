@@ -1,4 +1,4 @@
-import MainFooter from "./components/Layouts/MainFooter";
+/*import MainFooter from "./components/Layouts/MainFooter";
 import MainNavigation from "./components/Layouts/MainNavigation";
 import { Route, Switch } from "react-router-dom";
 import Main from "./pages/Main";
@@ -31,6 +31,37 @@ function App() {
         <Route path="/takeout-order">
           <TakeOut onTakeOut={setNavBarHandler} />
         </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+      </Switch>
+      <MainFooter />
+    </>
+  );
+}
+
+export default App;
+*/
+
+import MainFooter from "./components/Layouts/MainFooter";
+import MainNavigation from "./components/Layouts/MainNavigation";
+import { Route, Switch } from "react-router-dom";
+import Main from "./pages/Main";
+import Menu from "./pages/Menu";
+import Login from "./pages/Login";  // Keep Login import
+
+function App() {
+  return (
+    <>
+      <MainNavigation />
+      <Switch>
+        <Route path="/" exact>
+          <Main />
+        </Route>
+        <Route path="/menu">
+          <Menu />
+        </Route>
+        {/* Removed the TakeOut route */}
         <Route path="/login">
           <Login />
         </Route>

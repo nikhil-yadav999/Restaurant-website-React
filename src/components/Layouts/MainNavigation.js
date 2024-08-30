@@ -7,7 +7,7 @@ const MainNavigation = () => {
       <header className={classes.header}>
         <div className={classes.logo}>
           <Link to="/">
-            Ye's Cuisines
+            Ny's Cuisines
           </Link>
         </div>
         <nav className={classes.nav}>

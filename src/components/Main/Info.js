@@ -13,11 +13,11 @@ import Button from "../UI/Button";
 import { Link } from "react-router-dom";
 
 const dummy_chef_info = {
-  name: "Jiahao Ye",
+  name: "Nikhil Yadav",
   intro:
-    "Jiahao Ye would describe himself as a passionate, confident, and creative chef who can skilfully plan menus, prepare outstanding food, manage budgets, and lead a team of people to deliver quality of service to customers ",
+    "Nikhil Yadav would describe himself as a passionate, confident, and creative chef who can skilfully plan menus, prepare outstanding food, manage budgets, and lead a team of people to deliver quality of service to customers ",
   summary:
-    "Besides operating a restaurant, Jiahao Ye also has a mixed education background in computer science, mathematics and economics. He has a passion for full-stack web development and he loves to create beautiful modern and beautiful website. Additionally, Jiahao is also a money enthusiast and he loves to develop quantitative trading strategies using Python and C# proramming during his free time.",
+    "Besides operating a restaurant, Nikhil Yadav also has a mixed education background in computer science, mathematics.He also likes to develop datascience and machine learning models and also loves to solve competitive programming problems.",
 };
 
 const dummy_dishes_info = [
@@ -77,7 +77,7 @@ const Info = () => {
           <p>{dummy_chef_info.summary}</p>
         </div>
         <div className={classes["chef-pic"]}>
-          <img src={headchef} alt="head-chef Jiahao Ye" />
+          <img src={headchef} alt="head-chef Nikhil Yadav" />
         </div>
       </section>
 
